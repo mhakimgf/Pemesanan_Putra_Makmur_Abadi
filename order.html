@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT. Putra Makmur Abadi - Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">⊕</div>
+            <div>
+                <div style="font-size: 14px;">PT. PUTRA MAKMUR</div>
+                <div style="font-size: 12px;">ABADI</div>
+            </div>
+        </div>
+        <nav>
+            <a href="home.html">HOME</a>
+            <!-- <a href="catalog.html">CATALOG</a> -->
+            <a href="about.html">ABOUT US</a>
+            <!-- <a href="contact.html">CONTACT US</a> -->
+            <a href="order.html" class="order-btn">ORDER NOW</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="success-message" id="successMessage">
+            Order submitted successfully! We'll contact you soon.
+        </div>
+
+        <form id="orderForm">
+            <div class="form-grid">
+                <div>
+                    <h2 class="section-title">Product</h2>
+                    
+                    <div class="form-group">
+                        <label>Diameter<span class="required">*</span></label>
+                        <select name="diameter" required>
+                            <option value="">Select diameter</option>
+                            <option value="5 mm">5 mm</option>
+                            <option value="6 mm">6 mm</option>
+                            <option value="8 mm">8 mm</option>
+                            <option value="20 mm">20 mm</option>
+                            <option value="28 mm">28 mm</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Color<span class="required">*</span></label>
+                        <div class="color-options">
+                            <div class="color-option" onclick="selectColor(this, 'Black')">
+                                <input type="radio" name="color" value="Black" required>
+                                <span>Black</span>
+                            </div>
+                            <div class="color-option" onclick="selectColor(this, 'White')">
+                                <input type="radio" name="color" value="White">
+                                <span>White</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Quantity (meter)<span class="required">*</span></label>
+                        <input type="number" name="quantity" required min="1">
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="section-title">Shipping</h2>
+                    
+                    <div class="form-group">
+                        <label>Name<span class="required">*</span></label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Street Address<span class="required">*</span></label>
+                        <textarea name="address" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>City, Province (Ex. East Jakarta, Jakarta)<span class="required">*</span></label>
+                        <input type="text" name="city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Postal Code<span class="required">*</span></label>
+                        <input type="text" name="postalCode" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Notes</label>
+                        <textarea name="notes"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <div>
+                    <span>Need Help?</span>
+                    <button type="button" class="contact-btn">CONTACT US</button>
+                </div>
+                <button type="submit" class="proceed-btn">PROCEED PAYMENT</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
